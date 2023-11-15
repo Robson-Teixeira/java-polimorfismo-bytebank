@@ -11,8 +11,6 @@ public class Conta {
 		this.agencia = agencia;
 		this.numero = numero;
 		Conta.total++;
-		System.out.println("Conta criada: " + this.numero);
-		System.out.println("O total de contas é: " + Conta.total);
 	}
 
 	public Conta(int numero) {
