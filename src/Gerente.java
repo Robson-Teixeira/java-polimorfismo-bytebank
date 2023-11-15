@@ -4,8 +4,9 @@ public class Gerente extends Funcionario {
 	private int senha;
 	private String login;
 
+	// Caso a classe não implemente o método, ela deverá ser abstrata
 	public double getBonificacao() {
-		return super.getBonificacao() + super.getSalario();
+		return super.getSalario();
 	}
 
 	public void setSenha(int senha) {

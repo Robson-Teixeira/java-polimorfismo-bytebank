@@ -1,8 +1,9 @@
 
 public class EditorVideo extends Funcionario {
 
+	// Caso a classe não implemente o método, ela deverá ser abstrata
 	public double getBonificacao() {
-		return super.getBonificacao() + 100.0;
+		return 100.0;
 	}
 
 }
