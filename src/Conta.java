@@ -1,7 +1,8 @@
 
+// Classe abstrata não pode ser instanciada
 public abstract class Conta {
 
-	private double saldo;
+	protected double saldo;
 	private int agencia;
 	private int numero;
 	private Cliente cliente;
@@ -17,9 +18,8 @@ public abstract class Conta {
 		this(1123, numero); // Invoca o construtor que recebe int e int
 	}
 
-	public void deposita(double valor) {
-		this.saldo += valor;
-	}
+	// Método abstrato não pode ter implementação
+	public abstract void deposita(double valor);
 
 	public boolean saca(double valor) {
 		if (this.saldo >= valor) {
