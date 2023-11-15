@@ -3,15 +3,21 @@ public class TesteReferencias {
 
 	public static void main(String[] args) {
 
-		Funcionario gerente = new Gerente();
-		gerente.setNome("Robson Teixeira");
-		String nome = gerente.getNome();
-		System.out.println(nome);
-		
-		/* Não compilam
-		gerente.setSenha(131123);
-		gerente.setLogin("rmtb");
-		*/
+		Funcionario funcionario = new Funcionario();
+		funcionario.setSalario(2590.00);
+
+		Gerente gerente = new Gerente();
+		gerente.setSalario(5000.00);
+
+		EditorVideo editorVideo = new EditorVideo();
+		editorVideo.setSalario(2500.00);
+
+		ControleBonificacao controleBonificacao = new ControleBonificacao();
+		controleBonificacao.registra(funcionario);
+		controleBonificacao.registra(gerente);
+		controleBonificacao.registra(editorVideo);
+
+		System.out.println("Total bonificação: " + controleBonificacao.getSoma());
 
 	}
 
