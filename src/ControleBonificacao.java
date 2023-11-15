@@ -8,7 +8,8 @@ public class ControleBonificacao {
 	}
 
 	public void registra(Funcionario funcionario) {
-		this.soma += funcionario.getBonificacao(); // Método implementado pela classe específica/referenciada
+		this.soma += funcionario.getBonificacao();
+		// Aciona método implementado pela classe específica/tipo do objeto instanciado
 	}
 
 }
