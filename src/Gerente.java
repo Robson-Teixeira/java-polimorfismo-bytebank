@@ -1,5 +1,5 @@
 
-public class Gerente extends FuncionarioAutenticavel {
+public class Gerente extends Funcionario {
 
 	// Caso a classe não implemente o método, ela deverá ser abstrata
 	public double getBonificacao() {
