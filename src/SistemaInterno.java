@@ -4,10 +4,11 @@ public class SistemaInterno {
 	private int senha = 151123;
 
 	public void autentica(Autenticavel autenticavel) {
-		if (autenticavel.autentica(this.senha))
-			System.out.println("Acesso liberado ao sistema!");
-		else
-			System.out.println("Acesso negado ao sistema!");
+
+		String mensagem = autenticavel.getClass().getName() + ": Acesso %s ao sistema!";
+
+		System.out.println(autenticavel.autentica(this.senha) ? 
+				String.format(mensagem, "liberado") : String.format(mensagem, "negado"));
 	}
 
 }
