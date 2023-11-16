@@ -1,29 +1,12 @@
 
-public abstract class Autenticavel {
+public abstract interface Autenticavel {
 
-	private int senha;
-	private String login;
+	public abstract void setSenha(int senha);
 
-	public void setSenha(int senha) {
-		this.senha = senha;
-	}
+	public abstract void setLogin(String login);
 
-	public void setLogin(String login) {
-		this.login = login;
-	}
+	public abstract boolean autentica(int senha);
 
-	public boolean autentica(int senha) {
-		if (this.senha == senha)
-			return true;
-		else
-			return false;
-	}
-
-	public boolean autentica(String login, int senha) {
-		if (this.login == login && this.autentica(senha))
-			return true;
-		else
-			return false;
-	}
+	public abstract boolean autentica(String login, int senha);
 
 }
