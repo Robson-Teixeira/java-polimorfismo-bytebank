@@ -1,5 +1,5 @@
 
-public class ContaCorrente extends Conta {
+public class ContaCorrente extends Conta implements Tributavel {
 
 	public ContaCorrente(int agencia, int numero) {
 		super(agencia, numero); // Invoca o construtor que recebe int e int da classe Conta
